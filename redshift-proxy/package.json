@@ -1,0 +1,19 @@
+{
+  "name": "red-shift-proxy",
+  "version": "0.0.1",
+  "description": "recieve sql command, execute, and return results",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "testing"
+  ],
+  "author": "William Jin",
+  "license": "ISC",
+  "dependencies": {
+  }
+}

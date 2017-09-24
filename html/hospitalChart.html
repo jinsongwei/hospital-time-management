@@ -1,0 +1,439 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.120.0.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            AWS.config.update({
+                region: 'us-west-2',
+                credentials: {
+                    accessKeyId: "AKIAJELX7E74NLFTWCWA",
+                    secretAccessKey: "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"
+                }
+            });
+            AWS.config.apiVersions = {
+                dynamodb: '2012-08-10',
+            };
+            let ddb = new AWS.DynamoDB({apiVersion: '2012-10-08'});
+            const serviceList = [
+                'General',
+                'Ophthalmology',
+                'Plastics',
+                'Urology',
+                'Orthopedics',
+                'Obstetrics and Gynecology',
+                'Otolaryngology - ENT',
+                'Neurosurgery',
+                'Cardiothoracic',
+                'Maxillo-Facial/Oral Surgery',
+                'Dental',
+                'Transplant',
+                'Vascular',
+                'Radiation Oncology',
+                'Pulmonology',
+                'Anesthesiology '
+            ];
+            /**
+             * 110    General
+             * 230    Ophthalmology
+             * 340    Plastics
+             * 410    Urology
+             * 250    Orthopedics
+             * 120    Obstetrics and Gynecology
+             * 90    Otolaryngology - ENT
+             * 190    Neurosurgery
+             * 40    Cardiothoracic
+             * 424    Maxillo-Facial/Oral Surgery
+             * 240    Dental
+             * 390    Transplant
+             * 420    Vascular
+             * 370    Radiation Oncology
+             * 426    Pulmonology
+             * 10    Anesthesiology
+             */
+
+                // dataPoints
+            let service1 = [];
+            let service2 = [];
+            let service3 = [];
+            let service4 = [];
+            let service5 = [];
+            let service6 = [];
+            let service7 = []
+            let service8 = []
+            let service9 = [];
+            let service10 = [];
+            let service11 = [];
+            let service12 = [];
+            let service13 = [];
+            let service14 = [];
+            let service15 = [];
+            let service16 = [];
+
+            let chart = new CanvasJS.Chart("chartContainer", {
+                zoomEnabled: true,
+                title: {
+                    text: "Hospital Service Time Line"
+                },
+                toolTip: {
+                    shared: true
+
+                },
+                legend: {
+                    verticalAlign: "top",
+                    horizontalAlign: "center",
+                    fontSize: 14,
+                    fontWeight: "bold",
+                    fontFamily: "calibri",
+                    fontColor: "dimGrey"
+                },
+                axisX: {
+                    title: "chart updates every 5 secs"
+                },
+                axisY: {
+                    prefix: '#',
+                    includeZero: false
+                },
+                data: [{
+                    // dataSeries1
+                    type: "line",
+                    xValueType: "dateTime",
+                    showInLegend: true,
+                    name: "General",
+                    dataPoints: service1
+                },
+                    {
+                        // dataSeries2
+                        type: "line",
+                        xValueType: "dateTime",
+                        showInLegend: true,
+                        name: "Ophthalmology",
+                        dataPoints: service2
+                    },
+                    {
+                        type: "line",
+                        xValueType: "dateTime",
+                        showInLegend: true,
+                        name: "Plastics",
+                        dataPoints: service3
+                    },
+                    {
+                        type: "line",
+                        xValueType: "dateTime",
+                        showInLegend: true,
+                        name: "Urology",
+                        dataPoints: service4
+                    },
+                    {
+                        type: "line",
+                        xValueType: "dateTime",
+                        showInLegend: true,
+                        name: "Orthopedics",
+                        dataPoints: service5
+                    },
+                    {
+                        type: "line",
+                        xValueType: "dateTime",
+                        showInLegend: true,
+                        name: "Obstetrics and Gynecology",
+                        dataPoints: service6
+                    },
+                    {
+                        type: "line",
+                        xValueType: "dateTime",
+                        showInLegend: true,
+                        name: "Otolaryngology - ENT",
+                        dataPoints: service7
+                    },
+                    {
+                        type: "line",
+                        xValueType: "dateTime",
+                        showInLegend: true,
+                        name: "Neurosurgery",
+                        dataPoints: service8
+                    },
+                    {
+                        type: "line",
+                        xValueType: "dateTime",
+                        showInLegend: true,
+                        name: "Cardiothoracic",
+                        dataPoints: service9
+                    },
+                    {
+                        type: "line",
+                        xValueType: "dateTime",
+                        showInLegend: true,
+                        name: "Maxillo-Facial/Oral Surgery",
+                        dataPoints: service10
+                    },
+                    {
+                        type: "line",
+                        xValueType: "dateTime",
+                        showInLegend: true,
+                        name: "Dental",
+                        dataPoints: service11
+                    },
+                    {
+                        type: "line",
+                        xValueType: "dateTime",
+                        showInLegend: true,
+                        name: "Transplant",
+                        dataPoints: service12
+                    },
+                    {
+                        type: "line",
+                        xValueType: "dateTime",
+                        showInLegend: true,
+                        name: "Vascular",
+                        dataPoints: service13
+                    },
+                    {
+                        type: "line",
+                        xValueType: "dateTime",
+                        showInLegend: true,
+                        name: "Radiation Oncology",
+                        dataPoints: service14
+                    },
+                    {
+                        type: "line",
+                        xValueType: "dateTime",
+                        showInLegend: true,
+                        name: "Pulmonology",
+                        dataPoints: service15
+                    },
+                    {
+                        type: "line",
+                        xValueType: "dateTime",
+                        showInLegend: true,
+                        name: "Anesthesiology",
+                        dataPoints: service16
+                    }
+                ],
+                legend: {
+                    cursor: "pointer",
+                    itemclick: function (e) {
+                        if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                            e.dataSeries.visible = false;
+                        }
+                        else {
+                            e.dataSeries.visible = true;
+                        }
+                        chart.render();
+                    }
+                }
+            });
+
+            let updateInterval = 3000;
+
+            let updateChart = function () {
+                //todo  get data from ddb
+                updateService1(err=>{
+                    if(err) console.error(err);
+                    else updateService2(err=>{
+                        if(err) console.error(err);
+                        else updateService3(err=>{
+                            if(err) console.error(err);
+                            else updateService4(err=>{
+                                if(err) console.error(err);
+                                else chart.render();
+                            })
+                        })
+                    });
+                });
+            };
+
+            let updateService1 = (callback) => {
+                let params = {
+                    ExpressionAttributeValues: {
+                        ":v1": {
+                            S: "General"
+                        }
+                    },
+                    IndexName: "service_name-index",
+                    KeyConditionExpression: "service_name = :v1",
+                    ProjectionExpression: "sched_surgery_date_day",
+                    TableName: "hos1_table"
+                };
+                ddb.query(params, (err, data) => {
+                    if (err) {
+                        console.error(err.stack);
+                        callback(err);
+                    }
+                    else {
+                        console.log(data);
+                        let mapper = {};
+                        let records = data.Items;
+                        for (let i = 0; i < records.length; i++) {
+                            let schedTime = parseInt(records[i].sched_surgery_date_day.N) * 86400000;
+                            let keyTime = "T" + schedTime;
+                            if (keyTime in mapper) {
+                                mapper[keyTime] += 1;
+                            } else {
+                                mapper[keyTime] = 1;
+                            }
+                        }
+                        for (let key in mapper) {
+                            if (mapper.hasOwnProperty(key)) {
+
+                                service1.push({
+                                    x: parseInt(key.substr(1)),
+                                    y: mapper[key]
+                                });
+                            }
+                        }
+                        console.log(mapper);
+                        callback();
+                    }
+                });
+            };
+            let updateService2 = (callback) => {
+                let params = {
+                    ExpressionAttributeValues: {
+                        ":v1": {
+                            S: "Ophthalmology"
+                        }
+                    },
+                    IndexName: "service_name-index",
+                    KeyConditionExpression: "service_name = :v1",
+                    ProjectionExpression: "sched_surgery_date_day",
+                    TableName: "hos1_table"
+                };
+                ddb.query(params, (err, data) => {
+                    if (err) {
+                        console.error(err.stack);
+                        callback(err);
+                    }
+                    else {
+                        console.log(data);
+                        let mapper = {};
+                        let records = data.Items;
+                        for (let i = 0; i < records.length; i++) {
+                            let schedTime = parseInt(records[i].sched_surgery_date_day.N) * 86400000;
+                            let keyTime = "T" + schedTime;
+                            if (keyTime in mapper) {
+                                mapper[keyTime] += 1;
+                            } else {
+                                mapper[keyTime] = 1;
+                            }
+                        }
+                        for (let key in mapper) {
+                            if (mapper.hasOwnProperty(key)) {
+
+                                service2.push({
+                                    x: parseInt(key.substr(1)),
+                                    y: mapper[key]
+                                });
+                            }
+                        }
+                        console.log(mapper);
+                        callback();
+                    }
+                });
+            };
+            let updateService3 = (callback) => {
+                let params = {
+                    ExpressionAttributeValues: {
+                        ":v1": {
+                            S: "Plastics"
+                        }
+                    },
+                    IndexName: "service_name-index",
+                    KeyConditionExpression: "service_name = :v1",
+                    ProjectionExpression: "sched_surgery_date_day",
+                    TableName: "hos1_table"
+                };
+                ddb.query(params, (err, data) => {
+                    if (err) {
+                        console.error(new Error(err));
+                        console.error(err.stack);
+                    }
+                    else {
+                        console.log(data);
+                        let mapper = {};
+                        let records = data.Items;
+                        for (let i = 0; i < records.length; i++) {
+                            let schedTime = parseInt(records[i].sched_surgery_date_day.N) * 86400000;
+                            let keyTime = "T" + schedTime;
+                            if (keyTime in mapper) {
+                                mapper[keyTime] += 1;
+                            } else {
+                                mapper[keyTime] = 1;
+                            }
+                        }
+                        for (let key in mapper) {
+                            if (mapper.hasOwnProperty(key)) {
+
+                                service3.push({
+                                    x: parseInt(key.substr(1)),
+                                    y: mapper[key]
+                                });
+                            }
+                        }
+                        console.log(mapper);
+                        callback();
+                    }
+                });
+            };
+            let updateService4 = (callback) => {
+                let params = {
+                    ExpressionAttributeValues: {
+                        ":v1": {
+                            S: "General"
+                        }
+                    },
+                    IndexName: "service_name-index",
+                    KeyConditionExpression: "service_name = :v1",
+                    ProjectionExpression: "sched_surgery_date_day",
+                    TableName: "hos1_table"
+                };
+                ddb.query(params, (err, data) => {
+                    if (err) {
+                        console.error(err.stack);
+                        callback(err);
+                    }
+                    else {
+                        console.log(data);
+                        let mapper = {};
+                        let records = data.Items;
+                        for (let i = 0; i < records.length; i++) {
+                            let schedTime = parseInt(records[i].sched_surgery_date_day.N) * 86400000;
+                            let keyTime = "T" + schedTime;
+                            if (keyTime in mapper) {
+                                mapper[keyTime] += 1;
+                            } else {
+                                mapper[keyTime] = 1;
+                            }
+                        }
+                        for (let key in mapper) {
+                            if (mapper.hasOwnProperty(key)) {
+
+                                service1.push({
+                                    x: parseInt(key.substr(1)),
+                                    y: mapper[key]
+                                });
+                            }
+                        }
+                        console.log(mapper);
+                        callback();
+                    }
+                });
+            };
+            // generates first set of dataPoints
+            updateChart(3000);
+
+            // update chart after specified interval 
+            setInterval(function () {
+                updateChart()
+            }, updateInterval);
+        }
+    </script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;">
+</div>
+</body>
+
+
+</html>
