@@ -11,9 +11,3 @@ let recordLimit = 1000;
 hos1.send(numRecordsPerSec, seconds, recordLimit);
 
 
-// bottleneck and the difficulty.
-// bb softengineer
-// high charts js
-
-
-

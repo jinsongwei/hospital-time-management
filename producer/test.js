@@ -4,7 +4,7 @@
 
 
 
-const config = require('./config/config.json');
+const config = require('../config/config.json');
 let AWS = require('aws-sdk');
 
 const HOSPITAL_TABLE = "HosHSC.case_log";

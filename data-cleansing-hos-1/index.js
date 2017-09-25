@@ -3,7 +3,7 @@
  */
 
 //todo remove below when uploading to AWS
-// let config = require('./test/config-helper').config;
+// let config = require('../config/config-helper').config;
 // let AWS = new config().AWS; // remove this when upload to AWS
 
 
