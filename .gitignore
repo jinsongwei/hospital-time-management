@@ -9,3 +9,14 @@ out
 gen
 .gitignore
 .idea/inspectionProfiles/
+/firehose-lambda/data-cleansing-hos-1/hos1.zip
+.DS_Store
+config/
+data-factory/.gradle/
+data-factory/build.gradle
+data-factory/gradle/
+data-factory/gradlew
+data-factory/gradlew.bat
+data-factory/settings.gradle
+data-factory/src/
+html/
