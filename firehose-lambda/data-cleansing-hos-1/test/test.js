@@ -4,9 +4,10 @@
  
 const index = require('../index');
 
-const event = require('./event.json');
+const event = require('./mock-data');
 
 index.handler(event, null, (err)=>{
+
     if(err) console.error(err, err.stack);
 });
 

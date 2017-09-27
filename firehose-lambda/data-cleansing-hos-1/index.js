@@ -3,11 +3,10 @@
  */
 
 //todo remove below when uploading to AWS
-// let config = require('../config/config-helper').config;
-// let AWS = new config().AWS; // remove this when upload to AWS
+let config = require('../../config/config-helper').config;
+let AWS = new config().AWS; // remove this when upload to AWS
 
-
-const AWS = require('aws-sdk');
+// const AWS = require('aws-sdk');
 
 const ERR = require('error-msg');
 const schema = require('./schema');
@@ -15,6 +14,7 @@ const attributes = schema.attributes;
 
 let ddb = new AWS.DynamoDB({apiVersion: "2012-8-10", region: 'us-west-2'});
 const HOS_META_DATA_TABLE = "hos1_table";
+const META_DATA_TABLE = "meta-data-table";
 
 function processError(err, func, callback) {
     ERR.Log("Hospital1", func, err);
@@ -23,9 +23,14 @@ function processError(err, func, callback) {
 
 function DataTransform(event) {
     const self = this;
+    let totalRecordsNum = event.records.length;
+    let schemaValidNum = 0;
+    let caseValidNum = 0;
+    let validIds = [];
+    let curTime = Date.now();
+
     this.transform = (callback) => {
         self.callback = callback;
-
         displayInfo(err => {
             if (err) {
                 processError(new Error(err), "displayInfo", callback);
@@ -48,6 +53,7 @@ function DataTransform(event) {
                         }
                         console.log(records);
                         callback(null, records);
+                        saveMetaData(intermediateData, cleanData);
                     });
                 });
             });
@@ -56,23 +62,21 @@ function DataTransform(event) {
 
     // add log info here for different data interest
     function displayInfo(callback) {
-        // console.log(event);
         console.log(Date.now());
         callback();
     }
 
-    //
     function schemaValidation(callback) {
         const output = event.records.map((record) => {
             const entry = (new Buffer(record.data, 'base64')).toString('utf8');
             try {
                 content = JSON.parse(entry);
+                schemaValidNum++;
                 return {
                     recordId: record.recordId,
                     result: 'Ok',
                     data: content,
                 }
-
             } catch (e) {
                 console.error(e);
                 return {
@@ -85,17 +89,17 @@ function DataTransform(event) {
         callback(null, output);
     }
 
-
     //case validation logic: clean unreasonable date and case status and add or drop missing values.
     function caseValidation(intermediateData, callback) {
         const output = intermediateData.map((record) => {
+            caseValidNum++;
+            validIds.push(record.data['log_id']);
             return {
                 recordId: record.recordId,
                 result: 'Ok',
                 data: record.data
             }
         });
-
         callback(null, output);
     }
 
@@ -115,28 +119,28 @@ function DataTransform(event) {
             });
             callback(null, {records: output});
         });
-
     }
 
     function loopSaveToDDB(records, index, callback) {
         if (index < records.length) {
             const content = records[index].data;
+            // console.log(content);
             let params = {
                 TableName: HOS_META_DATA_TABLE,
                 Item: {
                     log_id: {S: content.log_id},
                     record_create_date: {S: content.record_create_date},
-                    record_create_date_mill: {N: content.record_create_date_mill.toString()},
-                    record_create_date_hash: {N: content.record_create_date_hash.toString()},
-                    record_create_date_day: {N: content.record_create_date_day.toString()},
+                    record_create_date_mill: {N: String(content.record_create_date_mill)},
+                    record_create_date_hash: {N: String(content.record_create_date_hash)},
+                    record_create_date_day: {N: String(content.record_create_date_day)},
                     last_update_date: {S: content.last_update_date},
-                    last_update_date_mill: {N: content.last_update_date_mill.toString()},
-                    last_update_date_hash: {N: content.last_update_date_hash.toString()},
-                    last_update_date_day: {N: content.last_update_date_day.toString()},
+                    last_update_date_mill: {N: String(content.last_update_date_mill)},
+                    last_update_date_hash: {N: String(content.last_update_date_hash)},
+                    last_update_date_day: {N: String(content.last_update_date_day)},
                     sched_surgery_date: {S: content.sched_surgery_date},
-                    sched_surgery_date_mill: {N: content.sched_surgery_date_mill.toString()},
-                    sched_surgery_date_hash: {N: content.sched_surgery_date_hash.toString()},
-                    sched_surgery_date_day: {N: content.sched_surgery_date_day.toString()},
+                    sched_surgery_date_mill: {N: String(content.sched_surgery_date_mill)},
+                    sched_surgery_date_hash: {N: String(content.sched_surgery_date_hash)},
+                    sched_surgery_date_day: {N: String(content.sched_surgery_date_day)},
                     case_class_name: {S: content.case_class_name},
                     surgeon_req_len: {S: content.surgeon_req_len},
                     setup_minutes: {S: content.setup_minutes},
@@ -173,10 +177,10 @@ function DataTransform(event) {
             };
             ddb.putItem(params, (err) => {
                     if (err) {
-                        console.error(err, err.stack);
                         records[index].result = 'ProcessingFailed';
+                        callback(err);
+                        return;
                     }
-                    // console.log(records[index]);
                     console.log(index);
                     loopSaveToDDB(records, index + 1, callback);
                 }
@@ -185,11 +189,35 @@ function DataTransform(event) {
             callback();
         }
     }
+
+    function saveMetaData() {
+        let hashHour = (parseInt(curTime / (1000 * 60 * 60))).toString();
+        let hashMin = (parseInt(curTime / (1000 * 60))).toString();
+        console.log(hashHour, hashMin);
+
+        let params = {
+            TableName: META_DATA_TABLE,
+            Item: {
+                hashKey: {S: hashHour},
+                rangeKey: {S: hashMin},
+                totalRecordsNum: {N: totalRecordsNum.toString()},
+                schemaValidNum: {N: schemaValidNum},
+                caseValidNum: {N: caseValidNum},
+                validIds: {SS: validIds}
+            }
+        };
+        console.log(validIds);
+        console.log(params);
+        ddb.putItem(params, (err) => {
+            if (err) console.error(err);
+            console.log((Date.now() - curTime) / 1000);
+        });
+    }
 }
 
 
 exports.handler = function (event, context, callback) {
-    if (!event || !event.invocationId || !event.deliveryStreamArn || !event.records) {
+    if (!event || !event.records) {
         console.error(ERR, 'not a valid stream event'); // 'Invalid request'
         return;
     }
