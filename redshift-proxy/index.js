@@ -5,7 +5,6 @@
 
 
 function RedshiftConnector() {
-    const self = this;
     const redshiftClient = require('./client.js');
 
     this.query = (command, callback) => {
@@ -16,7 +15,6 @@ function RedshiftConnector() {
             }
             else {
                 console.log(data.length);
-                // console.log(data[0]);
                 console.log(data[0]['log_id']);
                 callback(data);
                 redshiftClient.close();

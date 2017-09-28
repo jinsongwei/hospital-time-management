@@ -64,10 +64,10 @@ function sendToKinesis(kinesis, caseRecord) {
         PartitionKey: 'Hospital1_' + Date.now().toString() + "_" + logId,
         StreamName: HOSPITAL_GATE,
     };
-    console.log("sending ... ", caseRecord);
+    // console.log("sending ... ", caseRecord);
     kinesis.putRecord(putDataParams, function (err, data) {
         if (err) console.log(err, err.stack);
-        else console.log(data);
+        // else console.log(data);
     });
 }
 

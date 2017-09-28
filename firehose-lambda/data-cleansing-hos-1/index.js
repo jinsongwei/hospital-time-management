@@ -3,10 +3,10 @@
  */
 
 //todo remove below when uploading to AWS
-let config = require('../../config/config-helper').config;
-let AWS = new config().AWS; // remove this when upload to AWS
+// let config = require('../../config/config-helper').config;
+// let AWS = new config().AWS; // remove this when upload to AWS
 
-// const AWS = require('aws-sdk');
+const AWS = require('aws-sdk');
 
 const ERR = require('error-msg');
 const schema = require('./schema');
@@ -22,7 +22,6 @@ function processError(err, func, callback) {
 }
 
 function DataTransform(event) {
-    const self = this;
     let totalRecordsNum = event.records.length;
     let schemaValidNum = 0;
     let caseValidNum = 0;
@@ -30,7 +29,6 @@ function DataTransform(event) {
     let curTime = Date.now();
 
     this.transform = (callback) => {
-        self.callback = callback;
         displayInfo(err => {
             if (err) {
                 processError(new Error(err), "displayInfo", callback);
@@ -89,36 +87,68 @@ function DataTransform(event) {
         callback(null, output);
     }
 
-    //case validation logic: clean unreasonable date and case status and add or drop missing values.
+
     function caseValidation(intermediateData, callback) {
         const output = intermediateData.map((record) => {
             caseValidNum++;
-            validIds.push(record.data['log_id']);
+
+            //todo invalid check
+            let resultStatus = invalidCheck(record.data);
+            if(resultStatus === 'Dropped'){
+
+            }else{
+                validIds.push(record.data['log_id']);
+            }
             return {
                 recordId: record.recordId,
-                result: 'Ok',
+                result: resultStatus,
                 data: record.data
             }
         });
         callback(null, output);
     }
 
+    /**
+     *  case validation :
+     *  1. drop unreasonable date.
+     *  2. add missing value.
+     */
+    function invalidCheck(data){
+        if(data.sched_status_name === 'cancelled'
+            || data.record_create_date_mill > data.last_update_date_mill){
+            return 'Dropped';
+        }else{
+            return 'Ok';
+        }
+    }
+
     function saveToDDB(cleanData, callback) {
-        loopSaveToDDB(cleanData, 0, (err) => {
-            if (err) {
-                callback(err);
-                return;
+        const output = cleanData.map((record) => {
+            const payload = (new Buffer(JSON.stringify(record.data), 'utf8')).toString('base64');
+            return {
+                recordId: record.recordId,
+                result: record.result,
+                data: payload
             }
-            const output = cleanData.map((record) => {
-                const payload = (new Buffer(JSON.stringify(record.data), 'utf8')).toString('base64');
-                return {
-                    recordId: record.recordId,
-                    result: record.result,
-                    data: payload
-                }
-            });
-            callback(null, {records: output});
         });
+        callback(null, {records: output});
+
+        // loopSaveToDDB(cleanData, 0, (err) => {
+        //     if (err) {
+        //         callback(err);
+        //         return;
+        //     }
+        //
+        //     const output = cleanData.map((record) => {
+        //         const payload = (new Buffer(JSON.stringify(record.data), 'utf8')).toString('base64');
+        //         return {
+        //             recordId: record.recordId,
+        //             result: record.result,
+        //             data: payload
+        //         }
+        //     });
+        //     callback(null, {records: output});
+        // });
     }
 
     function loopSaveToDDB(records, index, callback) {
@@ -177,7 +207,6 @@ function DataTransform(event) {
             };
             ddb.putItem(params, (err) => {
                     if (err) {
-                        records[index].result = 'ProcessingFailed';
                         callback(err);
                         return;
                     }
@@ -201,16 +230,18 @@ function DataTransform(event) {
                 hashKey: {S: hashHour},
                 rangeKey: {S: hashMin},
                 totalRecordsNum: {N: totalRecordsNum.toString()},
-                schemaValidNum: {N: schemaValidNum},
-                caseValidNum: {N: caseValidNum},
+                schemaValidNum: {N: schemaValidNum.toString()},
+                caseValidNum: {N: caseValidNum.toString()},
                 validIds: {SS: validIds}
-            }
+            },
+            ReturnConsumedCapacity: "TOTAL"
         };
         console.log(validIds);
         console.log(params);
-        ddb.putItem(params, (err) => {
+        ddb.putItem(params, (err, data) => {
             if (err) console.error(err);
             console.log((Date.now() - curTime) / 1000);
+            console.log(data);
         });
     }
 }
