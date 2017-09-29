@@ -15,6 +15,7 @@
   "author": "William Jin",
   "license": "ISC",
   "dependencies": {
-    "error-msg": "../extra/error-msg"
+    "error-msg": "../../lib/error-msg",
+    "schema-gate": "../../lib/schema-gate"
   }
 }

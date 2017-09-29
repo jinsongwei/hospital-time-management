@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee865fbd-e54d-4d70-b603-69a548c44f15" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/playground/mapcheck.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/playground/testString.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/playground/time.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/schema-gate/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/schema-gate/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/schema-gate/protocol.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/schema-gate/test/test.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/hos1.zip" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/index.js" afterPath="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/node_modules/error-msg/package.json" afterPath="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/node_modules/error-msg/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/package.json" afterPath="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/test/test.js" afterPath="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/test/test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/producer/hospitals/hospital1.js" afterPath="$PROJECT_DIR$/producer/hospitals/hospital1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/producer/start.js" afterPath="$PROJECT_DIR$/producer/start.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,123 +27,105 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6003683">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="308">
-                  <caret line="92" column="26" lean-forward="false" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/.gitignore">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/producer/test.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="start.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/producer/start.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="75">
-                  <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/producer/package.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="client.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/redshift-proxy/client.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="6" column="44" lean-forward="false" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/redshift-proxy/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="hospital1.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/producer/hospitals/hospital1.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1080">
-                  <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/test/test.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-560">
-                  <caret line="117" column="20" lean-forward="false" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="47" column="48" lean-forward="false" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="protocol.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/schema-gate/protocol.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="format.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/playground/format.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4">
+              <caret line="36" column="15" lean-forward="false" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="start.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/producer/start.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ddbsave.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/ddbsave.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1050">
+              <caret line="70" column="4" lean-forward="false" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hospital1.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/producer/hospitals/hospital1.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="50" lean-forward="false" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/schema-gate/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="143" column="8" lean-forward="false" selection-start-line="143" selection-start-column="8" selection-end-line="143" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/test/test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Json" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -144,11 +134,19 @@
       <find>var</find>
       <find>ddb</find>
       <find>sched_status</find>
+      <find>interface</find>
+      <find>schemaJson</find>
+      <find>schemaKeyValue</find>
     </findStrings>
     <replaceStrings>
       <replace>let</replace>
       <replace>dynamodb</replace>
+      <replace>json</replace>
+      <replace>documentFormat</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/lib/schema-gate</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -159,17 +157,35 @@
         <option value="$PROJECT_DIR$/playground/testString.js" />
         <option value="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/test/mock-data.json" />
         <option value="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/test/mock-data.js" />
-        <option value="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/test/test.js" />
         <option value="$PROJECT_DIR$/html/ploty/sample.html" />
         <option value="$PROJECT_DIR$/html/ploty/two trace.html" />
         <option value="$PROJECT_DIR$/html/ploty/two-trace.html" />
-        <option value="$PROJECT_DIR$/producer/start.js" />
-        <option value="$PROJECT_DIR$/producer/hospitals/hospital1.js" />
         <option value="$PROJECT_DIR$/html/ploty/system-monitor.html" />
         <option value="$PROJECT_DIR$/redshift-proxy/client.js" />
         <option value="$PROJECT_DIR$/redshift-proxy/index.js" />
-        <option value="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/index.js" />
+        <option value="$PROJECT_DIR$/lib/schema-matching/package.json" />
+        <option value="$PROJECT_DIR$/lib/schema-matching/index.js" />
+        <option value="$PROJECT_DIR$/lib/schema-matching/test/test.js" />
+        <option value="$PROJECT_DIR$/lib/schema-gate/attributes.js" />
+        <option value="$PROJECT_DIR$/playground/initTassFly.js" />
+        <option value="$PROJECT_DIR$/playground/syntax.js" />
+        <option value="$PROJECT_DIR$/lib/schema-gate/main.js" />
+        <option value="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/package.json" />
+        <option value="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/node_modules/schema-gate/index.js" />
+        <option value="$PROJECT_DIR$/config/package.json" />
+        <option value="$PROJECT_DIR$/lib/schema-gate/package.json" />
+        <option value="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/schema_validation.js" />
+        <option value="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/schema_transform.js" />
+        <option value="$PROJECT_DIR$/lib/schema-gate/test/test.js" />
+        <option value="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/ddbsave.js" />
+        <option value="$PROJECT_DIR$/playground/format.js" />
+        <option value="$PROJECT_DIR$/producer/hospitals/hospital1.js" />
+        <option value="$PROJECT_DIR$/producer/start.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/lib/schema-gate/protocol.js" />
+        <option value="$PROJECT_DIR$/lib/schema-gate/index.js" />
+        <option value="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/test/test.js" />
+        <option value="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/index.js" />
       </list>
     </option>
   </component>
@@ -229,6 +245,13 @@
               <item name="firehose-lambda" type="462c0819:PsiDirectoryNode" />
               <item name="data-cleansing-hos-1" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="hospital-time-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hospital-time-management" type="462c0819:PsiDirectoryNode" />
+              <item name="firehose-lambda" type="462c0819:PsiDirectoryNode" />
+              <item name="data-cleansing-hos-1" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -244,21 +267,22 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/html/ploty/sample.html&#10;/Users/william/WebstormProjects/hospital-time-management/.gitignore&#10;/Users/william/WebstormProjects/hospital-time-management/playground/testString.js&#10;/Users/william/WebstormProjects/hospital-time-management/html/basic-step-line-chart.html&#10;/Users/william/WebstormProjects/hospital-time-management/html/ploty/system-monitor.html" />
+    <property name="add_unversioned_files" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="6.10.0" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/html/ploty" />
-      <recent name="$PROJECT_DIR$/config" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/firehose-lambda" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/producer/playground" />
       <recent name="$PROJECT_DIR$/config" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/config" />
+      <recent name="$PROJECT_DIR$/lib/schema-matching" />
+      <recent name="$PROJECT_DIR$/html/ploty" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -273,23 +297,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.start.js">
-    <configuration name="index.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="index.js" working-dir="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1" />
-    <configuration name="start.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="start.js" working-dir="$PROJECT_DIR$/producer" />
-    <configuration name="testString.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="testString.js" working-dir="$PROJECT_DIR$/playground" />
+  <component name="RunManager" selected="Node.js.test.js">
+    <configuration name="initTassFly.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="initTassFly.js" working-dir="$PROJECT_DIR$/playground" />
+    <configuration name="schema_validation.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/schema_transform.js" working-dir="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1" />
+    <configuration name="syntax.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="syntax.js" working-dir="$PROJECT_DIR$/playground" />
+    <configuration name="test.js (1)" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="test.js" working-dir="$PROJECT_DIR$/lib/schema-gate/test" />
     <configuration name="test.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="test.js" working-dir="$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/test" />
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Node.js.test.js" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.testString.js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.index.js" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.start.js" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Node.js.test.js (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.initTassFly.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.syntax.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.schema_validation.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.test.js" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.start.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.test.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.index.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.testString.js" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.test.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.test.js (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.schema_validation.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.syntax.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.initTassFly.js" />
       </list>
     </recent_temporary>
   </component>
@@ -307,7 +334,7 @@
       <workItem from="1506225862621" duration="828000" />
       <workItem from="1506403555866" duration="11765000" />
       <workItem from="1506483594838" duration="7176000" />
-      <workItem from="1506544925697" duration="1047000" />
+      <workItem from="1506544925697" duration="25897000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1506212653818</created>
@@ -358,23 +385,31 @@
       <option name="project" value="LOCAL" />
       <updated>1506567056992</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="delete playground">
+      <created>1506567159085</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1506567159085</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22216000" />
+    <option name="totallyTimeSpent" value="47066000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13741064" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1350278" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.50277996" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38938054" sideWeight="0.5059571" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.4940429" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1179941" sideWeight="0.49722" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.460177" sideWeight="0.4940429" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28761062" sideWeight="0.56711674" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42772862" sideWeight="0.56711674" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -382,7 +417,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -417,79 +451,14 @@
     <MESSAGE value="delete html dir" />
     <MESSAGE value="update firehose lambda" />
     <MESSAGE value="clean dir" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean dir" />
+    <MESSAGE value="delete playground" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete playground" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/config-helper.js" />
-    <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/test/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/test/event.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/test/mock-data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/ploty/system-monitor.html" />
-    <entry file="file://$PROJECT_DIR$/html/ploty/sample.html" />
-    <entry file="file://$PROJECT_DIR$/html/ploty/two-trace.html" />
-    <entry file="file://$PROJECT_DIR$/html/basic-step-line-chart.html" />
-    <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/test/event.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/producer/hospitals/hospital1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/producer/config/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playground/mapcheck.js" />
-    <entry file="file://$PROJECT_DIR$/producer/start.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/producer/test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -531,13 +500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/schema.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/producer/config/config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -546,13 +508,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/producer/config/formatcheck.js" />
-    <entry file="file://$PROJECT_DIR$/html/config.json" />
-    <entry file="file://$PROJECT_DIR$/config/client.js" />
-    <entry file="file://$PROJECT_DIR$/config/config.json" />
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1470">
           <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -562,13 +522,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="106">
           <caret line="47" column="26" lean-forward="false" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/test/event.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -599,32 +552,7 @@
     <entry file="file://$PROJECT_DIR$/html/ploty/two-trace.html" />
     <entry file="file://$PROJECT_DIR$/html/ploty/sample.html" />
     <entry file="file://$PROJECT_DIR$/html/ploty/system-monitor-ui-only.html" />
-    <entry file="file://$PROJECT_DIR$/html/basic-step-line-chart.html" />
-    <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/test/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/producer/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/ploty/system-monitor.html" />
-    <entry file="file://$PROJECT_DIR$/producer/hospitals/hospital1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/redshift-proxy/client.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -641,6 +569,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/playground/mapcheck.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/basic-step-line-chart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/error-msg/error.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/producer/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -649,34 +625,170 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/producer/start.js">
+    <entry file="file://$PROJECT_DIR$/playground/syntax.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="135">
+          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/index.js">
+    <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/node_modules/schema-gate/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="92" column="26" lean-forward="false" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
+        <state relative-caret-position="75">
+          <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playground/initTassFly.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/schema-gate/attributes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/schema-gate/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/schema.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/schema_transform.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/test/event.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playground/format.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4">
+          <caret line="36" column="15" lean-forward="false" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/producer/hospitals/hospital1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="50" lean-forward="false" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/producer/start.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="120">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/playground/mapcheck.js">
+    <entry file="file://$PROJECT_DIR$/producer/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="240">
+          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/schema-gate/protocol.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/schema-gate/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="143" column="8" lean-forward="false" selection-start-line="143" selection-start-column="8" selection-end-line="143" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/ddbsave.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="70" column="4" lean-forward="false" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/schema-gate/test/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/test/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firehose-lambda/data-cleansing-hos-1/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="47" column="48" lean-forward="false" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
           <folding />
         </state>
       </provider>

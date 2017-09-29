@@ -1,3 +1,7 @@
+/**
+ * query records from local mysql database, then sending it Kinesis.
+ */
+
 const config = require('../../config/config.json');
 let AWS = require('aws-sdk');
 
